@@ -109,6 +109,11 @@ platform_do_upgrade() {
 	cambiumnetworks,xe3-4)
 		fw_setenv bootcount 0
 		nand_do_upgrade "$1"
+  		;;
+	jdcloud,re-ss-01|\
+		kernelname="0:HLOS"
+		rootfsname="rootfs"
+		mmc_do_upgrade "$1"
 		;;
 	linksys,mr7350)
 		boot_part="$(fw_printenv -n boot_part)"
