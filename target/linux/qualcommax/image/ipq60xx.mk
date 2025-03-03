@@ -24,6 +24,19 @@ define Device/cambiumnetworks_xe3-4
 endef
 TARGET_DEVICES += cambiumnetworks_xe3-4
 
+define Device/jdcloud_re-ss-01
+	$(call Device/FitImage)
+	$(call Device/EmmcImage)
+	DEVICE_VENDOR := JDCloud
+	DEVICE_MODEL := AX1800 Pro
+	SOC := ipq6000
+	BLOCKSIZE := 64k
+	KERNEL_SIZE := 6144k
+	DEVICE_DTS_CONFIG := config@cp03-c2
+	DEVICE_PACKAGES := ipq-wifi-jdcloud_ax1800pro
+endef
+TARGET_DEVICES += jdcloud_re-ss-01
+
 define Device/linksys_mr7350
 	$(call Device/FitImage)
 	DEVICE_VENDOR := Linksys
