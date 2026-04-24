@@ -9,8 +9,8 @@
 #include "mt7981b.dtsi"
 
 / {
-	model = "H3C Magic NX30 Pro";
-	compatible = "h3c,magic-nx30-pro", "mediatek,mt7981";
+	model = "H3C Magic NX30 Pro (OpenWrt U-Boot layout)";
+	compatible = "h3c,magic-nx30-pro-ubootmod", "mediatek,mt7981";
 
 	aliases {
 		serial0 = &uart0;
